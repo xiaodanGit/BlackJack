@@ -1,0 +1,39 @@
+package basic;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import blackjack.BlackJackCard;
+
+
+
+public class Deck
+{
+	protected List<ICard> cards;
+	protected int dealIndex;
+	
+	public Deck(int setOfCards)
+	{
+		cards = new ArrayList<ICard>();
+		dealIndex = 0;
+	
+	}
+	
+	public void shuffle()
+	{
+		Collections.shuffle(cards);
+	}
+	
+	public ICard deal()
+	{
+		ICard ret = cards.get(dealIndex);
+		dealIndex++;
+		return ret;
+	}
+	
+	public int getLeftCardsNumber()
+	{
+		return cards.size() - dealIndex;
+	}
+
+}

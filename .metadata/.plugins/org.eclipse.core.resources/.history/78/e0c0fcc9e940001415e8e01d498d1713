@@ -1,0 +1,36 @@
+package blackjack;
+
+import java.util.List;
+import java.util.Set;
+
+
+
+public class BlackJackHand
+{
+	List<BlackJackCard> handCards;
+	private static final int GOAL = 21;
+	
+	public BlackJackHand()
+	{
+		
+	}
+	
+	
+	public Set<Integer> getHandValue()
+	{
+		int max = 0, min = 0, mid = 0;
+		for(int i = 0; i < handCards.size(); i++ )
+		{
+			max += handCards.get(i).getMaxValue();
+			min += handCards.get(i).getMidValue();
+			mid += handCards.get(i).getMidValue();
+		}
+	}
+	
+	public boolean isBust()
+	{
+		
+	}
+	
+
+}

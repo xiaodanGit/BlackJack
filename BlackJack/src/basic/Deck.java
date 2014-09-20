@@ -7,27 +7,16 @@ import blackjack.BlackJackCard;
 
 
 
-public class Deck
+public abstract class Deck
 {
-	List<Card> cards;
-	private int dealIndex;
+	protected List<ICard> cards;
+	protected int dealIndex;
 	
-	public Deck(int setOfCards, GameName name)
+	public Deck(int setOfCards)
 	{
-		cards = new ArrayList<Card>();
+		cards = new ArrayList<ICard>();
 		dealIndex = 0;
-		for(int i = 0; i < setOfCards; i++)
-		{
-			for(int j = 0; j < 52; j++)
-			{
-				Card c = null;
-				switch(name)
-				{
-				case BlackJack: c = new BlackJackCard(j);
-				}
-				cards.add(c);
-			} 
-		}		
+	
 	}
 	
 	public void shuffle()
@@ -35,9 +24,13 @@ public class Deck
 		Collections.shuffle(cards);
 	}
 	
-	public Card deal()
+	public ICard deal() throws NoEnoughCardException
 	{
-		Card ret = cards.get(dealIndex);
+		if(dealIndex >= cards.size())
+		{
+			throw new NoEnoughCardException("there is no enough card in deck");
+		}
+		ICard ret = cards.get(dealIndex);
 		dealIndex++;
 		return ret;
 	}
@@ -46,5 +39,8 @@ public class Deck
 	{
 		return cards.size() - dealIndex;
 	}
+	
+	abstract public List<ICard> dealHand() throws NoEnoughCardException;
+	
 
 }

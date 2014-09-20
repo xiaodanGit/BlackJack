@@ -1,0 +1,46 @@
+package basic;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import blackjack.BlackJackCard;
+
+
+
+public class Deck
+{
+	protected List<Card> cards;
+	protected int dealIndex;
+	
+	public Deck(int setOfCards)
+	{
+		cards = new ArrayList<Card>();
+		dealIndex = 0;
+		for(int i = 0; i < setOfCards; i++)
+		{
+			for(int j = 0; j < 52; j++)
+			{
+				Card c = null;
+				cards.add(c);
+			} 
+		}		
+	}
+	
+	public void shuffle()
+	{
+		Collections.shuffle(cards);
+	}
+	
+	public Card deal()
+	{
+		Card ret = cards.get(dealIndex);
+		dealIndex++;
+		return ret;
+	}
+	
+	public int getLeftCardsNumber()
+	{
+		return cards.size() - dealIndex;
+	}
+
+}

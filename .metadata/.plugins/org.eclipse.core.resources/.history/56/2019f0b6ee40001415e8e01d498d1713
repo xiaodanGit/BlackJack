@@ -1,0 +1,8 @@
+package blackjack;
+
+import basic.Deck;
+
+public class BlackJackDeck extends Deck
+{
+	
+}

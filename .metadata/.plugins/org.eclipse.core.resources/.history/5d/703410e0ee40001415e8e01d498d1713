@@ -1,0 +1,15 @@
+package blackjack;
+
+import basic.Deck;
+import basic.GameName;
+
+public class BlackJackDeck extends Deck
+{
+
+	public BlackJackDeck(int setOfCards, GameName name) 
+	{
+		super(setOfCards, name);
+		
+	}
+	
+}

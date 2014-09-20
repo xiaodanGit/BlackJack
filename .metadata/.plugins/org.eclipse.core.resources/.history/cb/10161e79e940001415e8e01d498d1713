@@ -1,0 +1,29 @@
+package blackjack;
+
+import java.util.List;
+import java.util.Set;
+
+
+
+public class BlackJackHand
+{
+	List<BlackJackCard> handCards;
+	
+	public BlackJackHand()
+	{
+		
+	}
+	
+	
+	public Set<Integer> getHandValue()
+	{
+		
+	}
+	
+	public boolean isBust()
+	{
+		
+	}
+	
+
+}

@@ -1,64 +1,77 @@
 package blackjack;
 
 import basic.Card;
+import basic.CardDeceroter;
 
 
 
-public class BlackJackCard extends Card
+public class BlackJackCard extends CardDeceroter implements Comparable<BlackJackCard>
 {
+	Card c;
 	
-	public BlackJackCard(int cardNumber) 
+	public BlackJackCard(int j) 
 	{
-		super(cardNumber);
+		this.c = new Card(j);
 		
 	}
 
 	public int getMaxValue()
 	{
-		if(this.getValue() >= 10)
+		if(c.getValue() >= 10)
 		{
 			return 10;
 		}
-		else if(this.getValue() == 1)
+		else if(c.getValue() == 1)
 		{
 			return 11;
 		}
 		else
 		{
-			return this.getValue();
+			return c.getValue();
 		}
 	}
 	
 	public int getMidValue()
 	{
-		if(this.getValue() >= 10)
+		if(c.getValue() >= 10)
 		{
 			return 10;
 		}
-		else if(this.getValue() == 1)
+		else if(c.getValue() == 1)
 		{
 			return 10;
 		}
 		else
 		{
-			return this.getValue();
+			return c.getValue();
 		}
 	}
 	
 	public int getMinValue()
 	{
-		if(this.getValue() >= 10)
+		if(c.getValue() >= 10)
 		{
 			return 10;
 		}
-		else if(this.getValue() == 1)
+		else if(c.getValue() == 1)
 		{
 			return 1;
 		}
 		else
 		{
-			return this.getValue();
+			return c.getValue();
 		}
+	}
+
+	private Card getCard()
+	{
+		return c;
+	}
+	
+	@Override
+	public int compareTo(BlackJackCard o) 
+	{
+		return c.compareTo(o.getCard());
 	}
 	
 	

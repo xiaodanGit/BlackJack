@@ -1,0 +1,50 @@
+package blackjack;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import basic.Card;
+import basic.Deck;
+import basic.GameName;
+import basic.ICard;
+import basic.NoEnoughCardException;
+
+public class BlackJackDeck extends Deck
+{
+	private static final int DEAL_NUMBER = 2;
+
+	public BlackJackDeck(int setOfCards) 
+	{
+		super(setOfCards);
+		for(int i = 0; i < setOfCards; i++)
+		{
+			for(int j = 0; j < 52; j++)
+			{
+				BlackJackCard c = new BlackJackCard(j);
+				cards.add(c);
+			} 
+		}		
+	}
+	
+	@Override 
+	public List<ICard> dealHand() throws NoEnoughCardException
+	{
+		try
+		{
+			List<ICard> ret = new ArrayList<ICard>();
+			int i = DEAL_NUMBER;
+			while(i > 0)
+			{
+				ICard c = this.deal();
+				ret.add(c);
+			}
+			return ret;
+		}
+		catch(NoEnoughCardException e)
+		{
+			throw e;
+		}
+		
+	}
+	
+}

@@ -1,0 +1,26 @@
+package blackjack;
+
+import java.util.ArrayList;
+
+import basic.Card;
+import basic.Deck;
+import basic.GameName;
+
+public class BlackJackDeck extends Deck
+{
+
+	public BlackJackDeck(int setOfCards) 
+	{
+		super(setOfCards);
+		for(int i = 0; i < setOfCards; i++)
+		{
+			for(int j = 0; j < 52; j++)
+			{
+				ICard c = new BlackJackCard(j);
+				cards.add(c);
+			} 
+		}		
+		
+	}
+	
+}

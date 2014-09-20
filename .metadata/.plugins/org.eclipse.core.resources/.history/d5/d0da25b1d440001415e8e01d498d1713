@@ -12,7 +12,6 @@ public class Card implements Comparable<Card>
 	
 	private int getValue()
 	{
-		System.out.println("test");
 		return 13* suit.getValue() + value;
 	}
 
@@ -22,7 +21,5 @@ public class Card implements Comparable<Card>
 	{
 		return this.getValue() - o.getValue();
 	}
-	
-	
 
 }

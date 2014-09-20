@@ -1,0 +1,11 @@
+package blackjack;
+
+import java.util.List;
+import BlackJackCard;
+
+public class BlackJackHand
+{
+	List<BlackJackCard> handCards;
+	
+
+}

@@ -1,0 +1,10 @@
+
+public enum Suit 
+{
+	Club(0), Heart(1), Spade(2), Diamond(3);
+	
+	private int value;
+	
+	Suit(int value)
+
+}

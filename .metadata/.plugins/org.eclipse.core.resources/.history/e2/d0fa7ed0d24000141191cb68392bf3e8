@@ -1,0 +1,19 @@
+
+public class Card implements Comparable<Card>
+{
+	private int value;
+	
+	public Card(int value, Suit suit)
+	{
+		
+	}
+
+
+	@Override
+	public int compareTo(Card o) 
+	{
+		
+		return 0;
+	}
+
+}

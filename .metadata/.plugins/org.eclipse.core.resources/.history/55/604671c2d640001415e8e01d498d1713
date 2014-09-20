@@ -1,0 +1,11 @@
+
+public class Deck 
+{
+	List<T extends Card>
+	
+	public Deck(int setOfCards)
+	{
+		
+	}
+
+}

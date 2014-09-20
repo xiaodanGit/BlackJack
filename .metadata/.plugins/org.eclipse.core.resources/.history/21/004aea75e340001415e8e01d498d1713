@@ -1,0 +1,20 @@
+
+public class BlackJackCard extends Card
+{
+	
+	public int getMaxValue()
+	{
+		if(Card)
+	}
+	
+	public int getMidValue()
+	{
+		
+	}
+	
+	public int getMinValue()
+	{
+		
+	}
+
+}

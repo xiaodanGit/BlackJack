@@ -1,0 +1,41 @@
+import java.util.Collections;
+import java.util.List;
+import java.util.Stack;
+
+
+public class Deck <Card>
+{
+	List<Card> cards;
+	private int dealIndex;
+	
+	public Deck(int setOfCards)
+	{
+		cards = new Stack<T>();
+		dealIndex = 0;
+		for(int i = 0; i < setOfCards; i++)
+		{
+			for(int j = 0; j < 52; j++)
+			{
+				cards.add((T) new Card(j));
+			}
+		}		
+	}
+	
+	public void shuffle()
+	{
+		Collections.shuffle(cards);
+	}
+	
+	public T deal()
+	{
+		T ret = cards.get(dealIndex);
+		dealIndex++;
+		return ret;
+	}
+	
+	public int getLeftCardsNumber()
+	{
+		return cards.size() - dealIndex;
+	}
+
+}

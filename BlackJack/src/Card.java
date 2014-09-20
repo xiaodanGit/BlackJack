@@ -10,17 +10,27 @@ public class Card implements Comparable<Card>
 		this.suit = suit;
 	}
 	
-	private int getValue()
+	public Card(int cardNumber)
 	{
-		System.out.println("test");
+		int suitNo = cardNumber / 13;
+		value = cardNumber % 13;
+		suit = Suit.createSuit(suitNo);
+	}
+	
+	private int getCardNumber()
+	{
 		return 13* suit.getValue() + value;
 	}
 
+	public int getValue()
+	{
+		return value;
+	}
 
 	@Override
 	public int compareTo(Card o) 
 	{
-		return this.getValue() - o.getValue();
+		return this.getCardNumber() - o.getCardNumber();
 	}
 	
 	

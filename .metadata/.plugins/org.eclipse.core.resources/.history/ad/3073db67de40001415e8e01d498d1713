@@ -1,0 +1,26 @@
+import java.util.List;
+import java.util.Stack;
+
+
+public class Deck <T extends Card>
+{
+	Stack<T> cards;
+	
+	public Deck(int setOfCards)
+	{
+		cards = new Stack<T>();
+		for(int i = 0; i < setOfCards; i++)
+		{
+			for(int j = 0; j < 52; j++)
+			{
+				cards.push((T) new Card(j));
+			}
+		}
+	}
+	
+	public T deal()
+	{
+		
+	}
+
+}

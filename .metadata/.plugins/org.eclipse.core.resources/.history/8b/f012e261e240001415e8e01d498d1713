@@ -1,0 +1,9 @@
+
+public class BlackJackCard extends Card
+{
+	public getBlackJackValue()
+	{
+		
+	}
+
+}

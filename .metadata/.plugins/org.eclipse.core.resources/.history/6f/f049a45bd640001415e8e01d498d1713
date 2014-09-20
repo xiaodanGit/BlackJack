@@ -1,0 +1,32 @@
+
+public class Card implements Comparable<Card>
+{
+	private int value;
+	Suit suit;
+	
+	public Card(int value, Suit suit)
+	{
+		this.value = value;
+		this.suit = suit;
+	}
+	
+	public Card(int cardNumber)
+	{
+		int suit = 
+	}
+	
+	private int getCardNumber()
+	{
+		return 13* suit.getValue() + value;
+	}
+
+
+	@Override
+	public int compareTo(Card o) 
+	{
+		return this.getCardNumber() - o.getCardNumber();
+	}
+	
+	
+
+}

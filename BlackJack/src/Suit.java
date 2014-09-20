@@ -14,5 +14,29 @@ public enum Suit
 	{
 		return value;
 	}
+	
+	public static Suit createSuit(int value)
+	{
+		if(value == 0)
+		{
+			return Suit.Club;
+		}
+		else if(value == 1)
+		{
+			return Suit.Heart;
+		}
+		else if(value == 2)
+		{
+			return Suit.Spade;
+		}
+		else if(value == 3)
+		{
+			return Suit.Diamond;
+		}
+		else
+		{
+			return null;
+		}
+	}
 
 }
